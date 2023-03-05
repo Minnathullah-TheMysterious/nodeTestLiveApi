@@ -1,12 +1,13 @@
 const express = require("express");
+const app = express();
 const dbConnect = require("./mongodb");
 const cors = require("cors");
+app.use(cors())
 const mongodb = require("mongodb"); ////require this for selecting item by ObjectId 
 const dotenv = require('dotenv')
 dotenv.config()
 const port = process.env.PORT || 9310;
 
-const app = express();
 app.use(express.json());
 
 app.get('/', (req, res)=>{
