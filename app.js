@@ -8,6 +8,9 @@ const port = process.env.PORT || 9310;
 const app = express();
 app.use(express.json());
 
+app.get('/', (req, res)=>{
+  res.send('Welcome to the node test API')
+})
 main = async () => {
   const db = await dbConnect();
 
