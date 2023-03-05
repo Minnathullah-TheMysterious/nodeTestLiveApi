@@ -1,5 +1,6 @@
 const express = require("express");
 const dbConnect = require("./mongodb");
+const cors = require("cors");
 const mongodb = require("mongodb"); ////require this for selecting item by ObjectId 
 const dotenv = require('dotenv')
 dotenv.config()
